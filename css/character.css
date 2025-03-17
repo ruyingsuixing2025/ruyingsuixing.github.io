@@ -1,0 +1,333 @@
+body {
+    background: url(../img/98.jpg) no-repeat;
+    background-size: 100%;
+    justify-content: center;
+}
+
+/* nav导航栏部分 */
+.nav ul li {
+    float: left;
+    padding: 37px 35px;
+}
+
+.nav ul li:nth-child(5) {
+    background: url("../img/nav_line.png") no-repeat center 72px;
+    background-size: 50%;
+}
+
+.nav ul li a {
+    font-size: 16px;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.nav ul li a:hover {
+    background-color: #ffffff23;
+}
+
+.nav ul li:hover {
+    background: url("../img/nav_line.png") no-repeat center 72px;
+    background-size: 50%;
+}
+
+/* 主体部分 */
+.main {
+    width: 1300px;
+    margin: 0 auto;
+    height: 1255px;
+    background-color: #f5f7fb;
+
+}
+
+.cards {
+    float: left;
+    width: 880px;
+    height: 1250px;
+    padding-bottom: 5px;
+    background: url(../img/cards_bg.png) no-repeat top right;
+    background-color: #fff;
+}
+
+.content .main .cards>h1 {
+    color: #791212;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 400px;
+}
+
+.card {
+    float: left;
+    /* 相对定位 */
+    position: relative;
+    width: 200px;
+    height: 310px;
+    margin: 30px 45px;
+    background-color: #997575;
+    border-radius: 20px;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    /* 弹性布局 */
+    display: flex;
+    /* 元素纵向排列 */
+    flex-direction: column;
+    /* 居中 */
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    /* 不让其他被挤压 */
+    flex-shrink: 0;
+}
+
+.card .photo img {
+    width: 100%;
+    height: 100%;
+    /* 保持原有尺寸比例,裁切长边 */
+    object-fit: cover;
+}
+
+/* 默认大图 */
+.card .photo {
+    /* 绝对定位 */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+    overflow: hidden;
+    /* 动画过度 */
+    transition: 0.5s;
+}
+
+/* 鼠标移入变小图 */
+.card:hover .photo {
+    top: 26px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* 这里加个黑色到透明的渐变背景,可以更好的看清楚名字 */
+.card .photo::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, 50%, #222);
+}
+
+.card h1 {
+    position: absolute;
+    top: 248px;
+    transition: 0.5s;
+}
+
+.card:hover h1 {
+    top: 120px;
+    font-size: 18px;
+}
+
+.card h2 {
+    margin-top: 150px;
+    width: 80%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+}
+
+.card p {
+    width: 90%;
+    text-indent: 32px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    /* 显示两行文字 */
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 6px 32px;
+    border-radius: 8px;
+}
+
+.card a:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.cards button {
+    margin: 10px 400px;
+    padding: 6px 20px;
+    font-size: 18px;
+    color: #3b0303;
+    background-color: #fff;
+    border: 2px solid rgba(124, 55, 55, 0.74);
+    border-radius: 10px;
+}
+
+.character {
+    float: right;
+    width: 400px;
+    height: 425px;
+    margin-top: 120px;
+    margin-left: 5px;
+    background-size: 6%;
+}
+
+.character .character_header {
+    float: right;
+    width: 340px;
+    height: 65px;
+    background: url(../img/h3_bg01.jpg) repeat-x top center;
+}
+
+.character .character_header h3 {
+    float: left;
+    line-height: 65px;
+    padding-left: 14px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.character_content {
+    float: right;
+    width: 340px;
+    background-color: #fff;
+}
+
+.character_content ul li {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.character_content ul li img {
+    width: 100px;
+    height: 69px;
+    margin-left: 15px;
+    box-sizing: border-box;
+    border: 1px solid #1f3931;
+    vertical-align: bottom;
+}
+
+.character_1,
+.character_2,
+.character_3,
+.character_4 {
+    width: 190px;
+    margin-left: 12px;
+}
+
+.character_1 h4,
+.character_2 h4,
+.character_3 h4,
+.character_4 h4 {
+    font-size: 14px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+/* 页脚部分 */
+footer .footer {
+    width: 1200px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.others ul {
+    padding-left: 298px;
+}
+
+.others ul li {
+    float: left;
+    padding-top: 45px;
+    padding-right: 60px;
+    cursor: pointer;
+}
+
+.others ul li em {
+    padding-left: 30px;
+}
+
+#layer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 260px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    animation: layer 3s;
+}
+
+@keyframes layer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#layer .layer-title {
+    line-height: 42px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    background-color: #f8f8f8;
+    border-radius: 2px 2px 0 0;
+}
+
+#layer .layer-content {
+    position: relative;
+    padding: 20px;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.layer-btn {
+    padding: 0 15px 12px;
+    border-top: 1px solid #eee;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #f8f8f8;
+    color: #333;
+    height: 28px;
+    line-height: 28px;
+    margin: 5px 5px 0;
+    padding: 0 15px;
+    border: 1px solid #f8f8f8;
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-open {
+    background-color: #1e9fff;
+    color: #fff;
+    border: 1px solid #1e9fff;
+}
+
+.layer-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}

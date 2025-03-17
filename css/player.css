@@ -1,0 +1,212 @@
+.video {
+    width: 835px;
+    height: 460px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 1px solid black;
+    background: black;
+}
+
+.video>video {
+    width: 835px;
+    height: 460px;
+}
+
+.video>.controls {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    background: white;
+}
+
+.controls>div:not(.time) {
+    border-radius: 50%;
+    color: white;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: black;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 5px;
+}
+
+.go {
+    left: 36px;
+}
+
+.back {
+    left: 72px
+}
+
+.progress {
+    border-radius: 5px !important;
+    left: 120px;
+    width: 300px !important;
+    height: 6px !important;
+    background: silver !important;
+}
+
+.progressInner {
+    background: gray;
+    height: 100%;
+    width: 0;
+}
+
+.progress>.circle {
+    position: absolute;
+    top: -3px;
+    left: -6px;
+    display: inline-block;
+    border-radius: 50%;
+    background: black;
+    width: 12px;
+    height: 12px;
+}
+
+.mute {
+    right: 72px;
+}
+
+.volume {
+    right: 36px;
+}
+
+.allScreen {
+    right: 2px;
+}
+
+.time {
+    position: absolute;
+    right: 113px;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+#range {
+    display: none;
+    transform: rotate(-90deg) !important;
+    position: absolute;
+    right: -18px;
+    bottom: 90px;
+}
+
+body {
+    background: url(../img/body_bg2.jpg) repeat top center;
+    width: 100%;
+    height: 100%;
+}
+
+#titleBar {
+    background-color: rgba(251, 241, 246, 0.773);
+    height: 9%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#titleBar .logo {
+    width: 10%;
+    height: 85%;
+    padding: 0.4% 1.2%;
+    float: left;
+    /* -webkit-transition: -webkit-transform 0.3s; */
+}
+
+#titleBar>.name {
+    position: absolute;
+    top: -42px;
+    left: 223px;
+    font-size: 40px;
+    font-family: 华文新魏;
+    padding: 0px 0.8%;
+    line-height: 180%;
+    float: left;
+}
+
+#player {
+    height: 80%;
+    width: 835px;
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    box-shadow: 5px 5px 10px 2px black;
+    -moz-box-shadow: 5px 5px 10px 2px black;
+    /* 老的 Firefox */
+    background-color: white;
+}
+
+#player>#video {
+    width: 100%;
+    height: 82.3%;
+    position: absolute;
+    top: 0;
+}
+
+#player>#name {
+    width: 100%;
+    height: 15%;
+    font-size: 30px;
+    font-family: 华文行楷;
+    position: absolute;
+    top: 83%;
+    overflow: auto;
+    left: 1%;
+}
+
+#player>#author {
+    width: 100%;
+    height: 3%;
+    font-size: 20px;
+    font-family: 隶书;
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+}
+
+#selector {
+    overflow: auto;
+    height: 90%;
+    width: 30%;
+    position: absolute;
+    right: 8%;
+    top: 9.3%;
+    background-color: rgba(134, 134, 134, 0.516);
+}
+
+#selector>div {
+    /*这是selector里每个选项框*/
+    width: 100%;
+    height: 31%;
+    position: relative;
+    padding: 2px 0px;
+    border-bottom: 2px solid black;
+}
+
+#selector>div>video {
+    /*选项的视频*/
+    width: 70%;
+    position: relative;
+    height: 100%;
+    float: left;
+}
+
+#selector>div>div {
+    /*选项视频的名称*/
+    width: 28%;
+    height: 30%;
+    position: relative;
+    padding: 2px 1px;
+    top: 2%;
+    cursor: default;
+    float: right;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+}

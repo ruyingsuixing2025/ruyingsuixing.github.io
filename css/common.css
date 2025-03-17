@@ -1,0 +1,63 @@
+/* 字体声明 */
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?td5g5j');
+    src: url('../fonts/icomoon.eot?td5g5j#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?td5g5j') format('truetype'),
+        url('../fonts/icomoon.woff?td5g5j') format('woff'),
+        url('../fonts/icomoon.svg?td5g5j#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+/* logo部分 */
+.logo {
+    float: left;
+    width: 240px;
+    height: 100px;
+}
+
+.logo img {
+    padding-top: 10px;
+    padding-left: 6px;
+    width: 100%;
+}
+
+.head {
+    height: 100px;
+    width: 100%;
+    background-color: #801609;
+}
+
+/* 页脚部分 */
+.foot_bg {
+    background: url(../img/foot_border.png) #fff top repeat-x;
+    width: 100%;
+    padding-top: 28px;
+    overflow: hidden;
+}
+
+footer {
+    width: 100%;
+    overflow: hidden;
+    background: url(../img/foot_bg.jpg) #fff center no-repeat;
+    color: #666;
+}
+
+/* 返回顶部 */
+.returnTop {
+    width: 75px;
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    bottom: 10%;
+}
+
+.returnTop img {
+    width: 100%;
+}
+
+#btn {
+    display: none;
+}

@@ -1,0 +1,360 @@
+body {
+    background-size: 100%;
+    justify-content: center;
+}
+
+/* nav导航栏部分 */
+.nav ul li {
+    float: left;
+    padding: 37px 35px;
+}
+
+.nav ul li:nth-child(2) {
+    background: url("../img/nav_line.png") no-repeat center 72px;
+    background-size: 50%;
+}
+
+.nav ul li a {
+    font-size: 16px;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.nav ul li a:hover {
+    background-color: #ffffff23;
+}
+
+.nav ul li:hover {
+    background: url("../img/nav_line.png") no-repeat center 72px;
+    background-size: 50%;
+}
+
+.content {
+    background: url(../img/banner-bg.png) no-repeat top center;
+}
+
+/* 轮播图部分 */
+.focus {
+    float: left;
+    position: relative;
+    width: 600px;
+    height: 325px;
+    margin-top: 20px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.focus ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+}
+
+.focus ul li {
+    float: left;
+    width: 600px;
+    height: 325px;
+}
+
+.focus img {
+    width: 100%;
+}
+
+.focus .prev {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -15px;
+    width: 20px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, .3);
+    font-family: 'icomoon';
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 2;
+}
+
+.focus .next {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -15px;
+    width: 20px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, .3);
+    font-family: 'icomoon';
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    z-index: 2;
+}
+
+.circle {
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    margin-left: -30px;
+    height: 13px;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 7px;
+}
+
+.circle li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    line-height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.circle .current {
+    background-color: #f39a71;
+}
+
+.news {
+    float: left;
+    margin-top: 80px;
+    padding: 12px 0 10px 28px;
+    width: 195px;
+    height: 160px;
+    /* background: url(../img/cards_bg.png) no-repeat top right; */
+    background-color: #fff;
+    background-size: 16%;
+}
+
+h4 {
+    display: inline-block;
+    width: auto;
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #941813;
+}
+
+h4>a {
+    color: #999;
+    font-size: 13px;
+    padding-left: 56px;
+
+}
+
+.news ul li {
+    width: 188px;
+    padding-left: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+li>a>span:first-child {
+    /* 在给文字设背景或者边框时，一定要注意包裹文字的标签类型，然后决定是否要进行标签类型转换 */
+    display: inline-block;
+    width: 35px;
+    height: 16px;
+    background-color: rgba(225, 37, 27, .08);
+    color: #e1251b;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+li>a>span:last-child {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+a>span:last-child:hover {
+    color: #e1251b;
+}
+
+a:hover {
+    color: #e1251b;
+}
+
+.content .left {
+    float: left;
+    width: 260px;
+    height: 1450px;
+    margin-left: 120px;
+    background-color: #fdfdfd;
+}
+
+.content .right {
+    float: left;
+    width: 1000px;
+    margin-left: 6px;
+    background-color: #fdfdfd;
+}
+
+/* activity部分 */
+.activity {
+    float: right;
+    width: 350px;
+    height: 336px;
+    margin-top: 15px;
+    margin-left: 13px;
+    margin-right: 16px;
+}
+
+.activity .activity-title {
+    display: inline-block;
+    width: 350px;
+    height: 30px;
+}
+
+.activity .activity-title i {
+    padding: 0 5px;
+    height: 30px;
+    line-height: 30px;
+    font-family: 'icomoon';
+    font-size: 16px;
+    color: #c60203;
+}
+
+.activity .activity-title em {
+    color: #c60203;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.activity .activity-content {
+    display: inline-block;
+    width: 350px;
+    height: 288px;
+}
+
+
+.activity .activity-content ul {
+    position: relative;
+}
+
+.activity .activity-content ul li {
+    font-family: 'icomoon';
+    font-size: 16px;
+    color: #c60203;
+    margin: 30px 5px;
+    cursor: pointer;
+}
+
+.activity .activity-content ul .content-1 {
+    margin-top: 22px;
+}
+
+.activity .activity-content ul li a {
+    color: #666;
+    font-style: 14px;
+    padding-left: 8px;
+    padding-bottom: 5px;
+}
+
+.activity .activity-content ul .last {
+    position: absolute;
+    right: -15px;
+    bottom: -57px;
+    border: none;
+    font-size: 12px;
+    color: #666;
+    padding: 0 13px;
+}
+
+.left .chat img {
+    margin-top: 120px;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.left .chat p {
+    margin-left: 82px;
+    font-size: 16px;
+}
+
+.chat {
+    position: relative;
+}
+
+.chat .close-btn {
+    position: absolute;
+    top: 366px;
+    right: 60px;
+    font-family: 'icomoon';
+    font-style: normal;
+}
+
+/* 资讯大集结 */
+.news_list {
+    padding-top: 388px;
+    margin-left: 15px;
+}
+
+.news_list ul li .item {
+    background-color: #ffffffa1;
+    padding: 16px 6px;
+    border-bottom: 1px dashed #941813;
+}
+
+.news_list ul li .item:hover {
+    background-color: #edebebcf;
+}
+
+.news_list ul li .item img {
+    float: left;
+    width: 200px;
+    height: 120px;
+    margin-right: 9px;
+}
+
+.news_list>span {
+    display: inline-block;
+    width: 230px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #bd1f17;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #bd1f17;
+}
+
+.news_list .item h3 {
+    font-size: 16px;
+}
+
+.news_list .item p {
+    padding-left: 212px;
+    margin-top: 12px;
+    margin-bottom: 50px;
+}
+
+/* 页脚部分 */
+footer .footer {
+    width: 1200px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.others ul {
+    padding-left: 298px;
+}
+
+.others ul li {
+    float: left;
+    padding-top: 45px;
+    padding-right: 60px;
+    cursor: pointer;
+}
+
+.others ul li em {
+    padding-left: 30px;
+}
