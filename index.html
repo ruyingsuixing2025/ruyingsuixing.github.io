@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如影随形</title>
+    <!-- 引入初始化的css 文件 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 引入首页的css文件 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入共用的css文件 -->
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<script>
+    function downloadAndRedirect() {
+        // 1. 触发下载
+        const downloadLink = document.createElement('a');
+        downloadLink.href = 'downloads/pages.zip';  // 压缩包路径
+        downloadLink.download = 'pages.zip';        // 下载文件名
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    
+        // 2. 延迟跳转到RunwayML（等待下载开始）
+        setTimeout(() => {
+            window.location.href = 'https://app.runwayml.com/login';
+        }, 1000);  // 1秒后跳转（可根据需要调整）
+    }
+</script>
+
+<body>
+    <!-- 公告栏 -->
+    <div id="notice">
+        <!-- 左侧公告标题 -->
+        <div id="notice-title">公告</div>
+        <!-- 公告内容区 -->
+        <ul class="notice">
+            <li> &nbsp;&nbsp;&nbsp;传承人徐文浩：做鞋不单是一门技术 更是一种责任</li>
+            <li> &nbsp;&nbsp;&nbsp;【非遗活动】首届“振兴传统工艺·鲁班杯”大赛公告</li>
+            <li> &nbsp;&nbsp;&nbsp;文化和旅游部 教育部 科技部 工业和信息化部 国家民委 财政部 人力资源社会保障部 商务部 知识产权局 乡村振兴局关于推动传统工艺 高质量传承发展的通知</li>
+            <li> &nbsp;&nbsp;&nbsp;关于开展非遗传统手工艺（苗族刺绣）进校园的项目采购公告</li>
+        </ul>
+        <!-- 公告手动翻页按钮 -->
+        <div id="nav-arrows">
+            <span id="nav-arrows-left">&lt;</span>
+            <span id="nav-arrows-right">&gt;</span>
+        </div>
+    </div>
+    <!-- 头部部分 -->
+    <div class="head clearfix">
+        <!-- logo部分 -->
+        <div class="logo">
+        </div>
+        <!-- 导航栏部分 -->
+        <div class="nav">
+            <ul class="clearfix">
+                <li style="margin-left: 120px;"> <a href="#">首页</a> </li>
+                <li> <a href="subpage/news.html" target="_blank">皮影资讯</a> </li>
+                <li> <a href="subpage/works.html" target="_blank">皮影形象</a> </li>
+                <li> <a href="subpage/character.html" target="_blank">皮影艺术家</a> </li>
+                <li style="position: relative;">
+            <input type="text" placeholder="搜索关键词" style="padding: 5px; width: 100px;">
+            <a href="#" onclick="downloadAndRedirect()" style="position: absolute; top: 0; right: 0; padding: 10px;">搜索</a>
+        </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="banner">
+        <img src="img/banner.png" alt="">
+    </div>
+    <!-- 主体部分 -->
+    <div class="main clearfix">
+        <!-- 轮播图开始 -->
+        <div class="carousel" id="carousel">
+            <div class="carousel-inner">
+                <div class="item">
+                    <a href="#" class="ai-banner-contain" target="_blank">
+                        <img src="img/banner1.jpg">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#" class="ai-banner-contain" target="_blank">
+                        <img src="img/banner2.jpg">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#" class="ai-banner-contain" target="_blank">
+                        <img src="img/banner3.jpeg">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#" class="ai-banner-contain" target="_blank">
+                        <img src="img/banner4.png">
+                    </a>
+                </div>
+
+                <div class="carousel-indicators">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </div>
+
+                <div class="carousel-control left">
+                    <img src="img/prev.png" alt="左箭头">
+                </div>
+                <div class="carousel-control right">
+                    <img src="img/next.png" alt="右箭头">
+                </div>
+            </div>
+        </div>
+        <!-- 轮播图结束 -->
+        <!-- 热门资讯开始 -->
+        <div class="clearfix">
+            <div class="news clearfix">
+                <div class="title clearfix">
+                    <span class="top">
+                        <a href="#"><span>热点</span>资讯</a>
+                    </span>
+                    <span class="clearfix">
+                        <a href="subpage/news.html">更多</a>
+                    </span>
+                </div>
+                <div class="content">
+                    <p>
+                        <i></i>
+                        <a href="http://ent.people.com.cn/n1/2022/0918/c1012-32528619.html" title="中国皮影：小光影映射大世界"
+                            target="_blank">中国皮影：小光影映射大世界</a>
+                    </p>
+                    <p>
+                        <i></i>
+                        <a href="https://www.thepaper.cn/newsDetail_forward_14305227" title="非遗寻访|“双手对舞百万兵”：华县皮影，融入当下"
+                            target="_blank">非遗寻访|“双手对舞百万兵”：华县皮影，融入当下</a>
+                    </p>
+                    <p>
+                        <i></i>
+                        <a href="https://news.sina.com.cn/c/xl/2024-08-11/doc-incihfxz5270850.shtml" title="千载皮影 “艺”心传承"
+                            target="_blank">千载皮影 “艺”心传承</a>
+                    </p>
+                    <p>
+                        <i></i>
+                        <a href="https://new.qq.com/rain/a/20230823A02AQ800" title="数字化赋能国风美学，中国皮影闪耀世界光影舞台"
+                            target="_blank">数字化赋能国风美学，中国皮影闪耀世界光影舞台</a>
+                    </p>
+                    <p>
+                        <i></i>
+                        <a href="https://news.cctv.com/2024/06/10/ARTIe036pWcUCc7spZs5wae9240610.shtml" title="文化中国行 | 光影流传 梦幻绮丽 非遗皮影祝您端午安康"
+                            target="_blank">文化中国行 | 光影流传 梦幻绮丽 非遗皮影祝您端午安康</a>
+                    </p>
+                    <p>
+                        <i></i>
+                        <a href="https://www.sohu.com/a/812285323_121798711" title="探秘光与影的艺术：亲子共创皮影戏的奇妙体验 "
+                            target="_blank">探秘光与影的艺术：亲子共创皮影戏的奇妙体验 </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- 热门资讯结束 -->
+        <!-- 皮影艺术家开始 -->
+        <div class="character">
+            <div class="character_header">
+                <h3>
+                    <strong>皮影艺术家</strong>
+                </h3>
+                <span>
+                    <a href="subpage/character.html">
+                        更多
+                        <img src="img/more.png" alt="更多">
+                    </a>
+                </span>
+            </div>
+            <div class="character_content">
+                <ul>
+                    <li>
+                        <img src="img/character1.jpg" alt="齐永衡">
+                        <div class="character_1">
+                            <h4>齐永衡</h4>
+                            <p>1933年2月生于河北省昌黎县耿庄村的一个皮影世家。中国戏剧家协会
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/character2.jpg" alt="何德润">
+                        <div class="character_2">
+                            <h4>何德润</h4>
+                            <p>湖南望城人。1910年3月生。1923年拜师吴友盛，学唱皮影戏，演出于湖
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/character3.jpg" alt="赵树同">
+                        <div class="character_3">
+                            <h4>赵树同</h4>
+                            <p>50年代毕业于中央美术学院雕塑研究班，受教于吴作人、刘开渠
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/character4.jpg" alt="魏立群">
+                        <div class="character_4">
+                            <h4>魏立群</h4>
+                            <p>1949年出生，河北昌黎人。河北师范大学艺术设计学院教授、学术
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 皮影艺术家结束 -->
+
+        <!-- 小视频开始 -->
+        <div class="medias" style="width: 540px; margin-top: 28px;">
+            <div class="medias_header">
+                <h3>
+                    <strong>小视频</strong>
+                </h3>
+                <span class="more">
+                    <a href="subpage/media.html">
+                        更多
+                        <img src="img/more.png" alt="更多">
+                    </a>
+                </span>
+            </div>
+            <div class="medias_content clearfix">
+                <div class="video_1">
+					<iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=649986506&bvid=BV1Te4y1G7HA&cid=956935083&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"width="100%"height="300"></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- 小视频结束 -->
+        <!-- 非遗视点开始 -->
+        <div class="art_view">
+            <div class="art_head">
+                <h3>
+                    <strong> 非遗视点</strong>
+                </h3>
+                <span class="more">
+                    <a href="#" style="color: #bebcbc;">
+                        更多
+                        <img src="img/more.png" alt="更多">
+                    </a>
+                </span>
+                <div class="art_content">
+                    <ul>
+                        <li>
+                            <h4>
+                                <a href="#" target="_blank">2023年“文化和自然遗产日”非遗宣传展示活动启动</a>
+                            </h4>
+                            <p>2023年6月10日是“文化和自然遗产日”。6月9日，2023年“文化和自然遗产日”非遗宣传展示活动</p>
+                        </li>
+                        <li>
+                            <h4>
+                                <a href="#" target="_blank">广东增城：非遗走进荔枝园 赋能乡村振兴</a>
+                            </h4>
+                            <p>6月17日至18日，广州市增城区举办全国百项非遗进增城活动，组织来自全国各地的非遗项目代表性传承人走进增城荔枝果园</p>
+                        </li>
+                        <li>
+                            <h4>
+                                <a href="#" target="_blank">文化和旅游部非遗司司长王晨阳：全面推进非物质文化遗产系统性保护</a>
+                            </h4>
+                            <p>非物质文化遗产是中华优秀传统文化的重要组成部分，是中华文明多元一体、绵延传承的生动见证。</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 非遗视点结束 -->
+        <!-- 皮影形象开始 -->
+        <div class="opus clearfix">
+            <h3 style="font-size: 24px;">皮影形象</h3>
+            <div class="opus_nav">
+                <ul class="tab_list clearfix">
+                    <li class="opus_current" style="margin-left: 40px;">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <i style="float: right;margin-right: 38px;font-size: 14px; margin-top: 56px;"> <a
+                            href="subpage/works.html">查看详情</a>
+                    </i>
+                </ul>
+            </div>
+            <div class="opus_art selected img-hover">
+                <ul class="clearfix">
+                    <li>
+                        <img src="img/0e38ada67837a368307acd8504950bfd.jpg" alt="当干花艺术·遇上古典团扇"overflow: hidden;>
+                    </li>
+                    <li>
+                        <img src="img/2a1379aaba50f615c66c805c47b150a2.jpg" alt="手工藤艺日式民宿诧寂风餐厅吊灯茶楼禅意编织藤编新中式吧台吊灯">
+                    </li>
+                    <li>
+                        <img src="img/4d4c946aec3f255a861bade46e9977b7.jpg" alt="油纸伞制作技艺">
+                    </li>
+                    <li>
+                        <img src="img/5d05afbd1fe3ea08f25b52c4b84ea63f.jpg" alt="剪纸、挂件">
+                    </li>
+                    <li>
+                        <img src="img/6ce62af7dbe686febd6593e68b488385.jpg" alt="板蓝根植物染色饰品（耳坠吊坠）">
+                    </li>
+                </ul>
+            </div>
+            <div class="opus_art img-hover">
+                <ul class="clearfix">
+                    <li>
+                        <img src="img/24ac0ee812302b9d0c24d74388ea9c08.jpg" alt="十二生肖全福香牌">
+                    </li>
+                    <li>
+                        <img src="img/32fdd4fd260d196bea8396d96052393a.jpg" alt="银手镯">
+                    </li>
+                    <li>
+						<img src="img/659b812ae7b8704c74dd7662998a6019.jpg" alt="风生水起帆布包">
+                    </li>
+                    <li>
+                        <img src="img/780f66999bdfb31574e36376cfdcedee.jpg" alt="竹林叟 竹编贝壳包 手工工艺">
+                    </li>
+                    <li>
+                        <img src="img/790bc39d2ba90f327899d777b585718d.jpg" alt="乌铜走银戒指">
+                    </li>
+                </ul>
+            </div>
+            <div class="opus_art img-hover">
+                <ul class="clearfix">
+                    <li>
+                        <img src="img/5291ffe7f404ec4ef244096d28cfb5d3.jpg" alt="烧蓝">
+                    </li>
+                    <li>
+                        <img src="img/157473d9a6ca725923444e4bc028784f.jpg" alt="林徽因设计夔龙纹对罐">
+                    </li>
+                    <li>
+                        <img src="img/b5802c48a5482023fbd342b8414bb13c.jpg" alt="中国玉雕工艺">
+                    </li>
+                    <li>
+                        <img src="images/2b2e490a526b484fa8973a5964a0ffa0.jpg" alt="花丝工艺又称为细金工艺 累丝工艺">
+                    </li>
+                    <li>
+                        <img src="images/4d1c7a50346e41bbb4658a6ad3cef503.jpg" alt="錾（zàn）刻">
+                    </li>
+                </ul>
+            </div>
+            <div class="opus_art img-hover">
+                <ul class="clearfix">
+                    <li>
+                        <img src="images/5f479cba1a2c4a8facee388f4e912145.jpg" alt="书房客厅装饰画定制原创手写毛笔字书法挂画">
+                    </li>
+                    <li>
+                        <img src="images/7abced60cf7841fead95fb43a1ec6e79.jpg" alt="竹雕字画客厅房间卧室书房办公室挂件竹制品">
+                    </li>
+                    <li>
+                        <img src="images/8fc570617c394220a84285d4df6a1919.jpg" alt="蜀锦蜀绣国风礼物四川川特色刺绣手工艺品六骏图书房卷轴挂画">
+                    </li>
+                    <li>
+                        <img src="images/9cb1c57cbdd64d96b29e57b1218d25d7.jpg" alt="手工刺绣 苏绣成品客厅书房苏州手工刺绣四联幅">
+                    </li>
+                    <li>
+                        <img src="images/19e17449ece64415a2c78429c3fdfcb7.jpg" alt="景德镇陶瓷瓷板画">
+                    </li>
+                </ul>
+            </div>
+            <div class="opus_art img-hover">
+                <ul class="clearfix">
+                    <li>
+                        <img src="images/414f7d93f59d44cba3bfe41a0249597a.jpg" alt="他们为传统手工月饼的手工艺传承铺垫了厚实的基础">
+                    </li>
+                    <li>
+                        <img src="images/497ec8f01d2d482b9b09aebc2c6ad919.jpg" alt="传统美食糖画">
+                    </li>
+                </ul>
+            </div>
+            <div class="opus_art img-hover">
+                <ul class="clearfix">
+                    <li>
+                        <img src="images/02411efba63a47288d63fd49aec516a1.jpg" alt="竹留青工艺">
+                    </li>
+                    <li>
+                        <img src="images/7908d152c78348ac9f3210354d10020f.jpg" alt="中国的牙雕技艺">
+                    </li>
+                    <li>
+                        <img src="images/08288f6dbb7d472d9353a05780a547d8.jpg" alt="葫芦雕刻">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 皮影形象结束 -->
+        <!-- 皮影视界开始 -->
+        <div class="view">
+            <div class="view_header">
+                <h3>皮影视界</h3>
+                <i style="float: right; margin-right: 38px; margin-top: 25px;"><a href="#">查看详情</a></i>
+            </div>
+            <div class="view_content">
+                <div class="v1 clearfix">
+                    <img src="img/view1.jpg" alt="【乡村振兴在青海】红岭村的皮影“大戏”">
+                    <div class="v1_content">
+                        <h4> <a href="https://new.qq.com/rain/a/20240925A00USE00"
+                                target="_blank">【乡村振兴在青海】红岭村的皮影“大戏”</a> </h4>
+                        <p>发布时间:2024-09-25 07:32 来源:青海青海日报官方账号</p>
+                    </div>
+                </div>
+                <div class="v1 clearfix">
+                    <img src="img/view2.png" alt="文化 | ​家乡的皮影戏">
+                    <div class="v1_content">
+                        <h4> <a href="https://new.qq.com/rain/a/20240923A04UAY00"
+                                target="_blank">文化 | ​家乡的皮影戏</a> </h4>
+                        <p>发布时间:2024-09-23 14:41 来源:陕西各界导报官方账号</p>
+                    </div>
+                </div>
+                <div class="v1 clearfix">
+                    <img src="img/view3.png" alt="光影逐梦——“精灵”们的皮影人生">
+                    <div class="v1_content">
+                        <h4> <a href="http://www.xinhuanet.com/politics/2021-04/07/c_1127304209.htm"
+                                target="_blank">光影逐梦——“精灵”们的皮影人生</a> </h4>
+                        <p>发布时间:2021-04-07 19:47 来源: 新华网</p>
+                    </div>
+                </div>
+                <div class="v1 clearfix">
+                    <img src="img/view4.png" alt="5000公里极限转场，海派皮影戏《九色鹿》从新疆跃向苏州">
+                    <div class="v1_content">
+                        <h4> <a href="https://new.qq.com/rain/a/20240921A04BOU00"
+                                target="_blank">5000公里极限转场，海派皮影戏《九色鹿》从新疆跃向苏州</a> </h4>
+                        <p>发布时间：2024-09-21 15:05 来源：文汇报官方账号</p>
+                    </div>
+                </div>
+                <div class="v1 clearfix">
+                    <img src="img/view6.jpg" alt="新华全媒+·图片故事|看一场迎新的“愿影”">
+                    <div class="v1_content">
+                        <h4> <a href="https://news.sina.com.cn/zx/gj/2024-01-28/doc-inafawff8823746.shtml"
+                                target="_blank">新华全媒+·图片故事|看一场迎新的“愿影”</a> </h4>
+                        <p>发布时间：2024年01月28日 15:32  作者： 来源：新华网</p>
+                    </div>
+                </div>
+                <div class="v1 clearfix">
+                    <img src="img/view7.jpg" alt="非遗数据知多少 | 皮影戏：隔帐陈述千古事，灯下挥舞鼓乐声">
+                    <div class="v1_content">
+                        <h4> <a href="https://www.ihchina.cn/project_details/26209"
+                                target="_blank">非遗数据知多少 | 皮影戏：隔帐陈述千古事，灯下挥舞鼓乐声</a> </h4>
+                        <p>发布时间：2022-11-24 10:47 来源：中国非物质文化遗产网 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 皮影视界结束 -->
+    </div>
+    <!-- 页脚开始 -->
+    <div class="foot_bg"></div>
+    <footer>
+        <div class="footer">
+            <!-- 友情链接： -->
+            <div class="f_link">
+                <ul class="clearfix">
+                    <li>友情链接：</li>
+                    <li>
+                        <a href="https://www.namoc.org/zgmsg/piy/gczp_list_2.shtml">中国美术馆</a>
+                    </li>
+                    <li>
+                        <a href="https://www.ihchina.cn/">中国非物质文化遗产网</a>
+                    </li>
+                    <li>
+                        <a href="http://shadow.caa.edu.cn/#/">皮影数字博物馆</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="code clearfix">
+            <div class="others">
+                <ul>
+                    <li>2024版权© <em>|</em> </li>
+                    <li>联系我们 <em>|</em> </li>
+                    <li>了解更多 <em>|</em> </li>
+                    <li>网站纠错 <em>|</em> </li>
+                    <li>数据来源: http://shadow.caa.edu.cn/#/</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- 页脚结束 -->
+
+    <!-- 返回顶部 -->
+    <div class="returnTop" id="btn">
+        <i class="aui-iconfont aui-icon-top" onclick="scrollToTop()"><img src="img/topback.png" alt=""></i>
+    </div>
+</body>
+
+<!-- 引入公告栏的js文件 -->
+<script src="js/notice.js"></script>
+<!-- 引入返回顶部的js文件 -->
+<script src="js/scrolltopcontrol.js"></script>
+<!-- 引入轮播图的js文件 -->
+<script src="js/carousel.js"></script>
+<!-- 引入选项卡的js文件 -->
+<script src="js/tab.js"></script>
+
+</html>
